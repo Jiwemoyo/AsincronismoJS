@@ -1,11 +1,11 @@
-try {
-    console.log('Todo se ejecuto con normalidad')
-    setTimeout(() => {
-        console.log('Compra realizada con exito')
-        throw('No puede realizar la compra espere un momento')
-    }, 1000);
-} catch (error) {
-    console.log('Algo paso',error)
-}finally{
-    console.log('Yo siempre me ejecuto')
+const mostrarConsola =(numero)=>{
+    console.log(numero)
 }
+
+const suma = (num1,num2,callback)=>{
+    let suma = num1 + num2
+    callback(suma)
+}
+
+
+suma(4,5,mostrarConsola)
