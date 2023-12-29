@@ -1,7 +1,11 @@
 try {
-    //Algo que podria fallarrr
+    console.log('Todo se ejecuto con normalidad')
+    setTimeout(() => {
+        console.log('Compra realizada con exito')
+        throw('No puede realizar la compra espere un momento')
+    }, 1000);
 } catch (error) {
-    //Capturamos el error de lo que podia fallar y damos una solucion
+    console.log('Algo paso',error)
 }finally{
-    //Esto se ejecuta siempre falle o no falle
+    console.log('Yo siempre me ejecuto')
 }
