@@ -32,18 +32,16 @@ let prometiendo2 = new Promise((resolve) => {
 })
 
 
-prometiendo.then(pa =>{
-    console.log(pa.description)
-    prometiendo1.then(pe=>{
-        console.log(pe.description)
-        prometiendo2.then(pi =>{
-            console.log(pi.description)
-        }).catch(per =>{
-            console.error(per)
-        })
-    }).catch(per=>{
-        console.error(per)
-    })
-}).catch(par=>{
-    console.error(par)
-})
+const llamandoPromesa = async()=>{
+    let promesa1 = await prometiendo
+    console.log(promesa1.description)
+
+    let promesa2 = await prometiendo1
+    console.log(promesa2.description)
+
+    let promesa3 = await prometiendo2
+    console.log(promesa3.description)
+}
+
+
+llamandoPromesa()
